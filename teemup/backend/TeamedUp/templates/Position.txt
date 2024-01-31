@@ -1,0 +1,59 @@
+1.1
+<div class="col-lg-3 col-md-4 mb-md-4">
+						<h5>Я хочу найти</h5>
+						<form>
+							<div class="row mt-4">
+								<div class="col-md-12">
+									<div class="mb-3">
+										<div class="position-relative">
+											<select id="f-prog" name="f-prog" size="1" class="form-control">
+												<option value="first">Все позиции</option>
+												<option value="var2">Point guard</option>
+												<option value="var3">shooting guard </option>
+												<option value="var4">small forward</option>
+											</select>
+										</div>
+									</div>
+								</div><!--end col-->
+								<div class="col-md-12">
+									<div class="mb-3">
+										<div class="position-relative">
+											<select id="f-prog" name="f-prog" size="1" class="form-control">
+												<option value="first">Все специальности</option>
+												<option value="var2">Бизнес и экономика</option>
+												<option value="var3">Естественные науки</option>
+												<option value="var4">Гуманитарные специальности</option>
+											</select>
+										</div>
+									</div>
+								</div><!--end col-->
+
+								<div class="col-md-12">
+									<div class="mb-3">
+										<div class="position-relative">
+											<div class="form-group">
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" id="gridCheck">
+													<label class="form-check-label" for="gridCheck">
+														Только со стипендиями
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div><!--end col-->
+
+
+
+
+ 							</div><!--end row-->
+							<div class="row">
+								<div class="col-sm-12">
+									<input type="submit" id="submit" name="send" class="btn btn-primary" value="Применить">
+									<input id="reset" name="reset" type="reset" class="btn nobtn btn-reset fs-12" value="Сбросить фильтр">
+								</div><!--end col-->
+							</div><!--end row-->
+						</form>
+
+
+					</div>

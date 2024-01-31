@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://teamedup.citadel.pro/html/ -->
+<html lang="ru"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>TeamedUP - University Sport Exchange Portal</title>
+
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Premium Bootstrap 5 Landing Page Template">
+		<meta name="keywords" content="Saas, Software, multi-uses, HTML, Clean, Modern">
+		<meta name="author" content="Shreethemes">
+		<meta name="email" content="shreethemes@gmail.com">
+		<meta name="website" content="http://shreethemes.in">
+		<meta name="Version" content="v3.0.0">
+		<!-- favicon -->
+		<link rel="apple-touch-icon" sizes="57x57" href="http://teamedup.citadel.pro/t/fav/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="http://teamedup.citadel.pro/t/fav/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="http://teamedup.citadel.pro/t/fav/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="http://teamedup.citadel.pro/t/fav/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="http://teamedup.citadel.pro/t/fav/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="http://teamedup.citadel.pro/t/fav/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="http://teamedup.citadel.pro/t/fav/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="http://teamedup.citadel.pro/t/fav/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="http://teamedup.citadel.pro/t/fav/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="http://teamedup.citadel.pro/t/fav/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="http://teamedup.citadel.pro/t/fav/t/fav/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="http://teamedup.citadel.pro/t/fav/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="http://teamedup.citadel.pro/t/fav/favicon-16x16.png">
+		<link rel="manifest" href="http://teamedup.citadel.pro/t/fav/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/t/fav/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+		<!-- Bootstrap -->
+		<link href="/static/main_files/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<!-- Icons -->
+		<link href="/static/main_files/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="/static/main_files/line.css">
+		<!-- Slider -->
+		<link rel="stylesheet" href="/static/main_files/tiny-slider.css">
+		<!-- Main Css -->
+		<link href="/static/main_files/style.css" rel="stylesheet" type="text/css" id="theme-opt">
+		<link href="/static/main_files/default.css" rel="stylesheet" id="color-opt">
+		<link href="/static/main_files/add.css" rel="stylesheet" id="my-style">
+	<style>
+		.for_scroll{
+			padding: 1rem;
+			max-height: 400px;
+			overflow-y: auto;
+			scrollbar-gutter: stable;
+		}
+	</style></head>
+
+	<body>
+			<!-- Navbar STart -->
+		<header id="topnav" class="defaultscroll sticky" style="background-color: white;">
+			<div class="container" >
+				<!-- Logo container-->
+				<a class="logo" href="http://teamedup.citadel.pro/html/">
+					<img src="/static/main_files/tup-svg.svg" class="logo-light-mode top-logo" alt="">
+									</a>
+				
+				<!-- End Logo container-->
+				{% if request.user.is_authenticated %}
+				<div class="menu-extras">
+					<div class="menu-item">
+						<!-- Mobile menu toggle-->
+						<a class="navbar-toggle" id="isToggle()" onclick="toggleMenu()">
+							<div class="lines">
+								
+							</div>
+						</a>
+						<!-- End mobile menu toggle-->
+					</div>
+				</div>
+
+					<div id="navigation">
+						<!-- Navigation Menu-->
+						<ul class="navigation-menu">
+							{% if user.profile.user_flag == True  %}
+								{%for i in menu_user %}
+									<li><a href={{i.link}} class="sub-menu-item">{{i.name}}</a></li>
+								{%endfor%}
+							{% endif %}
+							{% if user.univer_profile.flag == True %}
+						</ul><!--end navigation menu-->
+						{% endif %}
+
+						<div class="buy-menu-btn d-none">
+							<a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary">Buy Now</a>
+						</div><!--end login button-->
+
+					</div><!--end navigation-->
+				{% endif %}
+			</div><!--end container-->
+		</header><!--end header-->
+		<!-- Navbar End -->
+
+<!-- Авторизация / Регистрация -->
+<section class="bg-home d-flex align-items-center">
+			<div class="container" style="background-color: white;">
+				{% csrf_token %}
+				{% if request.user.profile.is_user == True %}
+					{% if request.user.is_authenticated %}
+						<div class="row">
+							<div class="col-lg-5 col-md-6">
+								
+								<!-- Авторизация -->
+								<h4 class="card-title text-center">Меню</h4>
+
+								<div class="card login-page bg-white shadow rounded border-0">
+
+									<div class="card-body">	
+										<div class="row">
+											<div class="mb-3">
+												<div class="d-grid">
+													<button onclick="change_panel(1)" class="btn btn-primary" id="first">Мой профиль</button>
+												</div>
+											</div>
+											<div class="mb-3">
+												<div class="d-grid">
+													<button onclick="change_panel(2)" class="btn btn-primary" id="second">Моё резюме</button>
+												</div>
+											</div>  
+										</div><!--end row-->
+
+									</div>
+								</div><!---->
+							</div> <!--end col-->
+							
+							<div class="col-lg-7 col-md-6">
+								<h4 class="card-title text-center">Мой профиль</h4>
+								<div class="card shadow rounded border-0">
+									<div class="card-body">
+											<div class="row">
+													<div id="Prof">
+														<h5>Accaunt</h5><br>
+														<p><b>Username:</b>  {{ user.username }} <br>
+															<b>Email:</b>  {{ user.email }} <br>
+														</p>
+														<a href="/accounts/logout/"><Button class="btn btn-primary">Выйти</Button></a>
+													</div>
+													<div id="Rezum" class="for_scroll" >
+														{{temp}}
+														{% if user.profile.user_flag == True %}
+															<button onclick="change_prof(1)" class="btn btn-primary" id="bio_bt" style="margin-bottom: 10px;">Bio</button>
+															<button onclick="change_prof(2)" class="btn btn-primary" id="academy_bt" style="margin-bottom: 10px;">Academy</button>
+															<button onclick="change_prof(3)" class="btn btn-primary" id="sport_bt" style="margin-bottom: 10px;">Sport</button>
+															<button onclick="change_prof(4)" class="btn btn-primary" id="sport_bt" style="margin-bottom: 10px;">Language</button>
+															<button onclick="change_prof(5)" class="btn btn-primary" id="sport_bt" style="margin-bottom: 10px;">Achivment</button>
+															<button onclick="change_prof(6)" class="btn btn-primary" id="sport_bt" style="margin-bottom: 10px;">Teems</button>
+														<a href="accounts/letter/"><button class="btn btn-primary" style="margin-bottom: 10px;">Letter</button></a>
+														<br>
+														<br>
+														<br>
+														<div id="bio">
+															<p>
+																<b>First name:</b>  {{ user.profile.first_name }}
+																<br>
+
+																<b>Last name:</b>  {{ user.profile.last_name }}
+																<br>
+																
+																<b>Date of birth:</b>  {{ user.profile.birth_date }}
+																<br>
+																
+																<b>Phone number:</b>  {{ user.profile.phone_num }}
+																<br>
+
+																<b>Country:</b>  {{ user.profile.country }}
+																<br>
+
+																<b>WhatsApp:</b>  {{ user.profile.whats_app }}
+																<br>
+
+																<b>Instagram:</b>  {{ user.profile.insta }}
+																<br>
+
+																<b>Telegram:</b>  {{ user.profile.telega }}
+																<br>
+															</p>
+															<a href="accounts/bio_set/" id="change"><Button class="btn btn-primary">Изменить</Button></a>
+														</div>
+														<div id="academy">
+															<p>
+																<b>English skill:</b>  {{ user.profile.eng_skill }}
+																<br>
+
+																<b>Scholarship:</b>  {{ user.profile.scholarship }}
+																<br>
+
+																<b>eng_class:</b>  {{ user.profile.eng_class }} |
+									
+																<b>math_class:</b>  {{ user.profile.math_class }} |
+
+																<b>natural_science_class:</b>  {{ user.profile.natural_science_class }} |
+
+																<b>additional_class:</b>  {{ user.profile.additional_class }} |
+
+																<b>social_science:</b>  {{ user.profile.social_science }} |
+
+																<b>additional_courses:</b>  {{ user.profile.additional_courses }}
+																<br>
+
+																<b>sat:</b>  {{ user.profile.sat }} |
+
+																<b>act:</b>  {{ user.profile.act }} |
+
+																<b>toefl:</b>  {{ user.profile.toefl }} |
+
+																<b>ielts:</b>  {{ user.profile.ielts }} 
+																<br>
+															</p>
+															<a href="accounts/academy_set/" id="change"><Button class="btn btn-primary">Изменить</Button></a>
+														</div>
+
+														<div id="sport">
+															<p>
+																<b>Sport:</b> {{ user.profile.sport }} 
+																<br>
+
+																<b>Position:</b> {{ user.profile.position }}
+																<br>
+
+																<b>Experience:</b> +{{ user.profile.ex }} years
+																<br>
+
+																<b>Name of sports organization:</b> {{ user.profile.sport_org_name }}
+																<br>
+
+																<b>Link of sports organization:</b>  {{ user.profile.sport_org_link }}
+																<br>
+
+																<b>Highlights link:</b>  {{ user.profile.highlights_link }}
+																<br>
+
+																<b>Stats link:</b>  {{ user.profile.stats_link }}
+																<br>
+
+																<b>Live stream link:</b>  {{ user.profile.live_stream_link }}
+																<br>
+
+																<b>Hand:</b>  {{ user.profile.hand }}
+																<br>
+
+																<b>Height:</b>  {{ user.profile.height_inch }} inch, {{ user.profile.height_cm }} cm
+																<br>
+
+																<b>Weight:</b>  {{ user.profile.weight_pound }} pound, {{ user.profile.weight_kg }} kg
+																<br>
+
+																<b>League resolution:</b>  {{ user.profile.league_resolution }}
+																<br>
+
+																<b>University or club:</b>  {{ user.profile.university_or_club }}
+																<br>
+															</p>
+															<a href="accounts/sport_set/" id="change"><Button class="btn btn-primary">Изменить</Button></a>
+														</div>
+
+														<div id="lan" >
+																<a href="/accounts/prof/accounts/lan"><Button class="btn btn-primary">Add</Button></a>
+															{%for i in lan%}
+																{%for j in i%}
+																<div class="card shadow rounded border-0" style="margin-top: 30px; ">
+																	<div class="card-body">
+																		<p>
+																			<b>Language:</b>  {{ j.name }}
+																			<br>
+						
+																			<b>Level:</b>  {{ j.level }}
+																			<br>
+																			
+																		</p>
+																		<form action="/accounts/prof/accounts/lan_set/?id={{j.id}}" method="post">
+																			{% csrf_token %}
+																			<Button class="btn btn-primary" name="id" style="display: center;" >Изменить</Button>
+																		</form>
+																		<a href="/accounts/prof/accounts/lan/delete/?id={{j.id}}">
+																			<img src="/static/main_files/trash_can.png" style="height: 30px; width:30px; margin-top: 10px;">
+																		</a>
+																	</div>
+																</div>
+																{%endfor%}
+															{% endfor %}
+														</div>
+
+														<div id="ach" >
+																<a href="/accounts/prof/accounts/ach"><Button class="btn btn-primary">Add</Button></a>
+															{%for i in ach%}
+																{%for j in i%}
+																<div class="card shadow rounded border-0" style="margin-top: 30px; ">
+																	<div class="card-body">
+																		<p>
+																			<b>Titel:</b>  {{ j.title_of_achiv }}
+																			<br>
+						
+																			<b>Type:</b>  {{ j.type }}
+																			<br>
+
+																			<b>Date:</b>  {{ j.date }}
+																			<br>
+																			
+																		</p>
+																		<form action="/accounts/prof/accounts/ach_set/?id={{j.id}}" method="post">
+																			{% csrf_token %}
+																			<Button class="btn btn-primary" name="id" style="display: center;" >Изменить</Button>
+																		</form>
+																		<a href="/accounts/prof/accounts/ach/delete/?id={{j.id}}">
+																			<img src="/static/main_files/trash_can.png" style="height: 30px; width:30px; margin-top: 10px;">
+																		</a>
+																	</div>
+																</div>
+																{%endfor%}
+															{% endfor %}
+														</div>
+
+														<div id="teem" >
+																<a href="/accounts/prof/accounts/teem"><Button class="btn btn-primary">Add</Button></a>
+															{%for i in teems %}
+																{%for j in i%}
+																	<div class="card shadow rounded border-0" style="margin-top: 30px; ">
+																		<div class="card-body">
+																			<p>
+																				<b>Name:</b>  {{ j.name }}
+																				<br>
+							
+																				<b>Link:</b>  {{ j.link }}
+																				<br>
+																				
+																			</p>
+																			<form action="/accounts/prof/accounts/teem_set/?id={{j.id}}" method="post">
+																				{% csrf_token %}
+																				<Button class="btn btn-primary" name="id" style="display: center;" >Изменить</Button>
+																			</form>
+																			<a href="/accounts/prof/accounts/teem/delete/?id={{j.id}}">
+																				<img src="/static/main_files/trash_can.png" style="height: 30px; width:30px; margin-top: 10px;">
+																			</a>
+																		</div>
+																	</div>
+																{%endfor%}
+															{% endfor %}
+														</div>
+
+
+														{% else %}
+															<a href="accounts/prof_set/"><Button class="btn btn-primary">Создать</Button></a>
+														{% endif %}
+
+													</div>
+											</div><!--end row-->
+									</div>
+								</div>
+
+							</div>
+						</div><!--end row-->
+					{% else %}
+					<div class="card-body">
+						<h4 class="card-title text-center"><a href="/accounts/login/" style="color: rgb(153, 51, 255);">Войдите</a>
+								или <a href="/accounts/reg/" style="color: rgb(255, 153, 51);">Зарегистрируетесь</a></h4>
+					</div>
+					{% endif %}
+				{% endif %}
+			</div> <!--end container-->
+		</section>
+
+
+
+		<!-- FAQ n Contact Start -->
+		
+		<div class="position-relative">
+			<div class="shape overflow-hidden text-footer">
+				<svg viewBox="0 0 2880 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M720 125L2160 0H2880V250H0V125H720Z" fill="currentColor"></path>
+				</svg>
+			</div>
+		</div>
+		<!-- FAQ n Contact End -->
+
+				<!-- Footer Start -->
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-12 mb-0 mb-md-4 pb-0 pb-md-2">
+						<a href="http://teamedup.citadel.pro/html/#" class="logo-footer">
+							<img src="./static/main_files/tup-bw.svg" height="120" alt="" style="filter: invert(1);">
+						</a>
+						<p class="mt-4">Start working with TeamedUP that can provide everything you need.</p>
+						<ul class="list-unstyled social-icon foot-social-icon mb-0 mt-4">
+							{% for l in web %}
+								<li class="list-inline-item"><a href="{{l.link}}" class="rounded"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="{{l.class}}"><rect x="{{l.x}}" y="{{l.y}}" width="{{l.width}}" height="{{l.height}}" rx="{{l.rx}}" ry="{{l.ry}}"></rect><path d="{{l.path}}"></path><line x1="{{l.x1}}" y1="{{l.y2}}" x2="{{l.x2}}" y2="{{l.y2}}"></line><circle cx="{{l.cx}}" cy="{{l.cy}}" r="{{l.r}}"></circle></svg></a></li>
+							{% endfor %}
+						</ul><!--end icon-->
+					</div><!--end col-->
+
+					<div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+						<h5 class="text-light footer-head">Company</h5>
+						<ul class="list-unstyled footer-list mt-4">
+							{%for l in company%}
+								<li><a href="{{l.link}}" class="text-foot"><i>&#9675</i>{{l.name}}</a></li>
+							{%endfor%}
+						</ul>
+					</div><!--end col-->
+
+					<div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+						<h5 class="text-light footer-head">Usefull Links</h5>
+						<ul class="list-unstyled footer-list mt-4">
+							{%for l in usfull_links%}
+								<li><a href="{{l.link}}" class="text-foot"><i>&#9675</i> {{l.name}}</a></li>
+							{%endfor%}
+						</ul>
+					</div><!--end col-->
+
+					<div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+						<h5 class="text-light footer-head">Newsletter</h5>
+						<p class="mt-4">Sign up and receive the latest tips via email.</p>
+						<form>
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="foot-subscribe mb-3">
+										<label class="form-label">Write your email <span class="text-danger">*</span></label>
+										<div class="form-icon position-relative">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail fea icon-sm icons"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+											<input type="email" name="email" id="emailsubscribe" class="form-control ps-5 rounded" placeholder="Your email : " required="">
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-12">
+									<div class="d-grid">
+										<input type="submit" id="submitsubscribe" name="send" class="btn btn-soft-primary" value="Subscribe">
+									</div>
+								</div>
+							</div>
+						</form>
+					</div><!--end col-->
+				</div><!--end row-->
+			</div><!--end container-->
+		</footer><!--end footer-->
+		<footer class="footer footer-bar">
+			<div class="container text-center">
+				<div class="row align-items-center">
+					<div class="col-sm-6">
+						<div class="text-sm-start">
+							<p class="mb-0">© 2021 TeamedUP</p>
+						</div>
+					</div><!--end col-->
+
+					<div class="col-sm-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+						<ul class="list-unstyled text-sm-end mb-0">
+							<li class="list-inline-item"><a href="javascript:void(0)"><img src="./static/main_files/american-ex.png" class="avatar avatar-ex-sm" title="American Express" alt=""></a></li>
+							<li class="list-inline-item"><a href="javascript:void(0)"><img src="./static/main_files/discover.png" class="avatar avatar-ex-sm" title="Discover" alt=""></a></li>
+							<li class="list-inline-item"><a href="javascript:void(0)"><img src="./static/main_files/master-card.png" class="avatar avatar-ex-sm" title="Master Card" alt=""></a></li>
+							<li class="list-inline-item"><a href="javascript:void(0)"><img src="./static/main_files/paypal.png" class="avatar avatar-ex-sm" title="Paypal" alt=""></a></li>
+							<li class="list-inline-item"><a href="javascript:void(0)"><img src="./static/main_files/visa.png" class="avatar avatar-ex-sm" title="Visa" alt=""></a></li>
+						</ul>
+					</div><!--end col-->
+				</div><!--end row-->
+			</div><!--end container-->
+		</footer><!--end footer-->
+		<!-- Footer End -->
+
+		<!-- Back to top -->
+		<a href="http://teamedup.citadel.pro/html/#" onclick="topFunction()" id="back-to-top" class="btn btn-icon btn-primary back-to-top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up icons"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></a>
+		<!-- Back to top -->
+		
+
+		<!-- javascript -->
+		<script src="./static/main_files/bootstrap.bundle.min.js"></script>
+		<!-- SLIDER -->
+		<script src="./static/main_files/tiny-slider.js"></script>
+		<!-- Icons -->
+		<script src="./static/main_files/feather.min.js"></script>
+		<!-- Main Js -->
+		<script src="./static/main_files/plugins.init.js"></script><style type="text/css">.typewrite > .wrap { border-right: 0.08em solid transparent}</style><!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
+        <script>
+            let a;
+			let b;
+            function change_panel(a){
+                if (a==1){
+					
+                    document.getElementById("Rezum").hidden=true;
+                    document.getElementById("Prof").hidden=false;
+					document.getElementById("second").style.backgroundColor='blue'
+                    document.getElementById("first").style.backgroundColor='perpul'
+
+                }
+                if (a==2){
+                    document.getElementById("Prof").hidden=true;
+                    document.getElementById("Rezum").hidden=false;
+					document.getElementById("first").style.backgroundcolor='blue'
+                    document.getElementById("second").style.backgroundcolor='perpul'
+
+                }
+            };
+            document.addEventListener('DOMContentLoaded', function(){
+                document.getElementById("Rezum").hidden=true
+            }, false);
+
+			function change_prof(b){
+                if (b==1){
+                    document.getElementById("academy").hidden=true;
+					document.getElementById("sport").hidden=true;
+                    document.getElementById("bio").hidden=false;
+					document.getElementById("lan").hidden=true;
+					document.getElementById("ach").hidden=true;
+					document.getElementById("change").hidden=false;
+					document.getElementById("teem").hidden=true;
+
+
+                }
+                if (b==2){
+                    document.getElementById("academy").hidden=false;
+					document.getElementById("sport").hidden=true;
+                    document.getElementById("bio").hidden=true;
+					document.getElementById("lan").hidden=true;
+					document.getElementById("ach").hidden=true;
+					document.getElementById("change").hidden=false;
+					document.getElementById("teem").hidden=true;
+
+
+
+
+                }
+				if (b==3){
+                    document.getElementById("academy").hidden=true;
+					document.getElementById("sport").hidden=false;
+                    document.getElementById("bio").hidden=true;
+					document.getElementById("lan").hidden=true;
+					document.getElementById("ach").hidden=true;
+					document.getElementById("change").hidden=false;
+					document.getElementById("teem").hidden=true;
+
+
+
+                }
+
+				if (b==4){
+                    document.getElementById("academy").hidden=true;
+					document.getElementById("sport").hidden=true;
+                    document.getElementById("bio").hidden=true;
+					document.getElementById("lan").hidden=false;
+					document.getElementById("ach").hidden=true;
+					document.getElementById("change").hidden=true;
+					document.getElementById("teem").hidden=true;
+
+
+                }
+
+				if (b==5){
+                    document.getElementById("academy").hidden=true;
+					document.getElementById("sport").hidden=true;
+                    document.getElementById("bio").hidden=true;
+					document.getElementById("lan").hidden=true;
+					document.getElementById("ach").hidden=false;
+					document.getElementById("change").hidden=true;
+					document.getElementById("teem").hidden=true;
+
+
+                }
+
+				if (b==6){
+                    document.getElementById("academy").hidden=true;
+					document.getElementById("sport").hidden=true;
+                    document.getElementById("bio").hidden=true;
+					document.getElementById("lan").hidden=true;
+					document.getElementById("ach").hidden=true;
+					document.getElementById("change").hidden=true;
+					document.getElementById("teem").hidden=false;
+
+                }
+            };
+            document.addEventListener('DOMContentLoaded', function(){
+                document.getElementById("academy").hidden=true
+				document.getElementById("sport").hidden=true
+				document.getElementById("lan").hidden=true
+				document.getElementById("ach").hidden=true;
+				document.getElementById("teem").hidden=true;
+
+            }, false);
+
+        </script>
+    </body><app-content ng-version="11.1.0"></app-content></html>

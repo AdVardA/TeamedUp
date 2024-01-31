@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ru"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>TeamedUP - University Sport Exchange Portal</title>
+
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Premium Bootstrap 5 Landing Page Template">
+		<meta name="keywords" content="Saas, Software, multi-uses, HTML, Clean, Modern">
+		<meta name="author" content="Shreethemes">
+		<meta name="email" content="shreethemes@gmail.com">
+		<meta name="website" content="http://shreethemes.in">
+		<meta name="Version" content="v3.0.0">
+		<!-- favicon -->
+		<link rel="apple-touch-icon" sizes="57x57" href="http://teamedup.citadel.pro/t/fav/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="http://teamedup.citadel.pro/t/fav/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="http://teamedup.citadel.pro/t/fav/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="http://teamedup.citadel.pro/t/fav/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="http://teamedup.citadel.pro/t/fav/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="http://teamedup.citadel.pro/t/fav/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="http://teamedup.citadel.pro/t/fav/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="http://teamedup.citadel.pro/t/fav/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="http://teamedup.citadel.pro/t/fav/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="http://teamedup.citadel.pro/t/fav/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="http://teamedup.citadel.pro/t/fav/t/fav/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="http://teamedup.citadel.pro/t/fav/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="http://teamedup.citadel.pro/t/fav/favicon-16x16.png">
+		<link rel="manifest" href="http://teamedup.citadel.pro/t/fav/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/t/fav/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+		<!-- Bootstrap -->
+		<link href="/static/main_files/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<!-- Icons -->
+		<link href="/static/main_files/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="/static/main_files/line.css">
+		<!-- Slider -->
+		<link rel="stylesheet" href="/static/main_files/tiny-slider.css">
+		<!-- Main Css -->
+		<link href="/static/main_files/style.css" rel="stylesheet" type="text/css" id="theme-opt">
+		<link href="/static/main_files/default.css" rel="stylesheet" id="color-opt">
+		<link href="/static/main_files/add.css" rel="stylesheet" id="my-style">
+	<style>
+
+	option:checked {
+		background-color:rgb(153, 51, 255);
+		color: white
+	}
+	option:focus  {
+		color: #444645;
+		background: green;
+		/* hover on select */
+	}
+
+	/* Стили таблицы (IKSWEB) */
+	table.iksweb{text-decoration: none;border-collapse:collapse;width:100%;text-align:center;}
+	table.iksweb th{font-weight:normal;font-size:14px; color:#ffffff;background-color:#9933ff;}
+	table.iksweb td{font-size:13px;color:#354251;}
+	table.iksweb td,table.iksweb th{white-space:pre-wrap;padding:10px 5px;line-height:13px;vertical-align: middle;border: 1px solid #9933ff;}	table.iksweb tr:hover{background-color:#ffffff}
+	table.iksweb tr:hover td{color:#000000;cursor:default;}
+
+    .for_scroll{
+			padding: 1rem;
+			max-height: 600px;
+			overflow-y: auto;
+			scrollbar-gutter: stable;
+	}
+
+
+	</style></head>
+
+	<body>
+		<!-- Navbar STart -->
+	<header id="topnav" class="defaultscroll sticky" style="background-color: white;">
+		<div class="container" >
+			<!-- Logo container-->
+			<a class="logo" href="http://teamedup.citadel.pro/html/">
+				<img src="/static/main_files/tup-svg.svg" class="logo-light-mode top-logo" alt="">
+								</a>
+			
+			<!-- End Logo container-->
+			<div class="menu-extras">
+				<div class="menu-item">
+					<!-- Mobile menu toggle-->
+					<a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+						<div class="lines">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</a>
+					<!-- End mobile menu toggle-->
+				</div>
+			</div>
+
+
+			</div><!--end navigation-->
+		</div><!--end container-->
+	</header><!--end header-->
+	<!-- Navbar End -->
+
+<!-- Авторизация / Регистрация -->
+<section class="bg-half bg-light d-table w-100">
+			<div class="container" style="height: 800px; padding-top: 5%;">
+				<!-- Создание резюме -->
+				<div class="card shadow rounded border-0" style="margin-left: 15%;margin-right: 15%;">
+						<div class="card-body" >
+							<div id="Rezum" class="for_scroll" >
+                                {{temp}}
+                                    <button onclick="change_prof(1)" class="btn btn-primary" id="bio_bt" style="margin-bottom: 10px;">Bio</button>
+                                    <button onclick="change_prof(2)" class="btn btn-primary" id="academy_bt" style="margin-bottom: 10px;">Academy</button>
+                                    <button onclick="change_prof(3)" class="btn btn-primary" id="sport_bt" style="margin-bottom: 10px;">Sport</button>
+                                    <button onclick="change_prof(4)" class="btn btn-primary" id="language_bt" style="margin-bottom: 10px;">Language</button>
+                                    <button onclick="change_prof(5)" class="btn btn-primary" id="achivment_bt" style="margin-bottom: 10px;">Achivment</button>
+                                    <button onclick="change_prof(6)" class="btn btn-primary" id="teems_bt" style="margin-bottom: 10px;">Teems</button>
+									<button onclick="change_prof(7)" class="btn btn-primary" id="letter_bt" style="margin-bottom: 10px;">Letter</button>                                <br>
+                                <br>
+                                <br>
+                                <div id="bio">
+                                    <p>
+                                        <b>First name:</b>  {{ profile.first_name }}
+                                        <br>
+
+                                        <b>Last name:</b>  {{ profile.last_name }}
+                                        <br>
+                                        
+                                        <b>Date of birth:</b>  {{ profile.birth_date }}
+                                        <br>
+                                        
+                                        <b>Phone number:</b>  {{ profile.phone_num }}
+                                        <br>
+
+                                        <b>Country:</b>  {{ profile.country }}
+                                        <br>
+
+                                        <b>WhatsApp:</b>  {{ profile.whats_app }}
+                                        <br>
+
+                                        <b>Instagram:</b>  {{ profile.insta }}
+                                        <br>
+
+                                        <b>Telegram:</b>  {{ profile.telega }}
+                                        <br>
+                                    </p>
+                                </div>
+                                <div id="academy">
+                                    <p>
+                                        <b>English skill:</b>  {{ profile.eng_skill }}
+                                        <br>
+
+                                        <b>Scholarship:</b>  {{ profile.scholarship }}
+                                        <br>
+
+                                        <b>eng_class:</b>  {{ profile.eng_class }} |
+            
+                                        <b>math_class:</b>  {{ profile.math_class }} |
+
+                                        <b>natural_science_class:</b>  {{ profile.natural_science_class }} |
+
+                                        <b>additional_class:</b>  {{ profile.additional_class }} |
+
+                                        <b>social_science:</b>  {{ profile.social_science }} |
+
+                                        <b>additional_courses:</b>  {{ profile.additional_courses }}
+                                        <br>
+
+                                        <b>sat:</b>  {{ profile.sat }} |
+
+                                        <b>act:</b>  {{ profile.act }} |
+
+                                        <b>toefl:</b>  {{ profile.toefl }} |
+
+                                        <b>ielts:</b>  {{ profile.ielts }} 
+                                        <br>
+                                    </p>
+                                </div>
+
+                                <div id="sport">
+                                    <p>
+                                        <b>Sport:</b> {{ profile.sport }} 
+                                        <br>
+
+                                        <b>Position:</b> {{ profile.position }}
+                                        <br>
+
+                                        <b>Name of sports organization:</b> {{ profile.sport_org_name }}
+                                        <br>
+
+                                        <b>Link of sports organization:</b>  {{ profile.sport_org_link }}
+                                        <br>
+
+                                        <b>Highlights link:</b>  {{ profile.highlights_link }}
+                                        <br>
+
+                                        <b>stats link:</b>  {{ profile.stats_link }}
+                                        <br>
+
+                                        <b>live_stream link:</b>  {{ profile.live_stream_link }}
+                                        <br>
+
+                                        <b>Hand:</b>  {{ profile.hand }}
+                                        <br>
+
+                                        <b>Height:</b>  {{ profile.height_inch }} inch, {{ profile.height_cm }} cm
+                                        <br>
+
+                                        <b>Weight:</b>  {{ profile.weight_pound }} pound, {{ profile.weight_kg }} kg
+                                        <br>
+
+                                        <b>league_resolution:</b>  {{ profile.league_resolution }}
+                                        <br>
+
+                                        <b>university_or_club:</b>  {{ profile.university_or_club }}
+                                        <br>
+                                    </p>
+                                </div>
+
+                                <div id="lan" >
+                                    {%for i in lan%}
+									<div class="card shadow rounded border-0" style="margin-top: 30px; ">
+										<div class="card-body">
+											<p>
+												<b>Language:</b>  {{ i.name }}
+												<br>
+
+												<b>Level:</b>  {{ i.level }}
+												<br>
+												
+											</p>
+										</div>
+									</div>
+                                    {% endfor %}
+                                </div>
+
+                                <div id="ach" >
+                                    {%for i in ach%}
+                                        <div class="card shadow rounded border-0" style="margin-top: 30px; ">
+                                            <div class="card-body">
+                                                <p>
+                                                    <b>Titel:</b>  {{ i.title_of_achiv }}
+                                                    <br>
+
+                                                    <b>Type:</b>  {{ i.type }}
+                                                    <br>
+
+                                                    <b>Date:</b>  {{ i.date }}
+                                                    <br>
+                                                    
+                                                </p>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+
+                                <div id="teem" >
+                                    {%for i in teems %}
+                                            <div class="card shadow rounded border-0" style="margin-top: 30px; ">
+                                                <div class="card-body">
+                                                    <p>
+                                                        <b>Name:</b>  {{ i.name }}
+                                                        <br>
+    
+                                                        <b>Link:</b>  {{ i.link }}
+                                                        <br>
+                                                        
+                                                    </p>
+                                                </div>
+                                            </div>
+                                    {% endfor %}
+                                </div>
+								<div id="letter_div" >
+										<div class="card shadow rounded border-0" style="margin-top: 30px;">
+												<textarea class="form-control ps-5" style="height: 300px; background-color: white;" disabled=True>{{profile.letter}}</textarea>
+										</div>
+								</div>
+
+                            </div>
+						</div>
+					</div>
+
+					
+			</div> <!--end container-->
+		</section>
+
+
+
+		<footer class="footer footer-bar" style="position: absolute; width: 100%;">
+			<div class="container text-center">
+				<div class="row align-items-center">
+					<div class="col-sm-6">
+						<div class="text-sm-start">
+							<p class="mb-0">© 2021 TeamedUP</p>
+						</div>
+					</div><!--end col-->
+
+					<div class="col-sm-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+						<ul class="list-unstyled text-sm-end mb-0">
+							<li class="list-inline-item"><a href="javascript:void(0)"><img src="./static/main_files/american-ex.png" class="avatar avatar-ex-sm" title="American Express" alt=""></a></li>
+							<li class="list-inline-item"><a href="javascript:void(0)"><img src="./static/main_files/discover.png" class="avatar avatar-ex-sm" title="Discover" alt=""></a></li>
+							<li class="list-inline-item"><a href="javascript:void(0)"><img src="./static/main_files/master-card.png" class="avatar avatar-ex-sm" title="Master Card" alt=""></a></li>
+							<li class="list-inline-item"><a href="javascript:void(0)"><img src="./static/main_files/paypal.png" class="avatar avatar-ex-sm" title="Paypal" alt=""></a></li>
+							<li class="list-inline-item"><a href="javascript:void(0)"><img src="./static/main_files/visa.png" class="avatar avatar-ex-sm" title="Visa" alt=""></a></li>
+						</ul>
+					</div><!--end col-->
+				</div><!--end row-->
+			</div><!--end container-->
+		</footer><!--end footer-->
+		<!-- Footer End -->
+
+		<!-- Back to top -->
+		<a href="http://teamedup.citadel.pro/html/#" onclick="topFunction()" id="back-to-top" class="btn btn-icon btn-primary back-to-top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up icons"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></a>
+		<!-- Back to top -->
+		
+
+		<!-- javascript -->
+		<script src="./static/main_files/bootstrap.bundle.min.js"></script>
+		<!-- SLIDER -->
+		<script src="./static/main_files/tiny-slider.js"></script>
+		<!-- Icons -->
+		<script src="./static/main_files/feather.min.js"></script>
+		<!-- Main Js -->
+		<script src="./static/main_files/plugins.init.js"></script><style type="text/css">.typewrite > .wrap { border-right: 0.08em solid transparent}</style><!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
+		<script src="./static/main_files/app.js"></script><!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
+        <script>
+			let b=0;
+            function change_prof(b){
+				console.log(b)
+                if (b==1){
+                    document.getElementById("academy").hidden=true;
+					document.getElementById("sport").hidden=true;
+                    document.getElementById("bio").hidden=false;
+					document.getElementById("lan").hidden=true;
+					document.getElementById("ach").hidden=true;
+					document.getElementById("teem").hidden=true;
+					document.getElementById("letter_div").hidden=true;
+
+                }
+
+                if (b==2){
+                    document.getElementById("academy").hidden=false;
+					document.getElementById("sport").hidden=true;
+                    document.getElementById("bio").hidden=true;
+					document.getElementById("lan").hidden=true;
+					document.getElementById("ach").hidden=true;
+					document.getElementById("teem").hidden=true;
+					document.getElementById("letter_div").hidden=true;
+
+
+
+                }
+
+				if (b==3){
+                    document.getElementById("academy").hidden=true;
+					document.getElementById("sport").hidden=false;
+                    document.getElementById("bio").hidden=true;
+					document.getElementById("lan").hidden=true;
+					document.getElementById("ach").hidden=true;
+					document.getElementById("teem").hidden=true;
+					document.getElementById("letter_div").hidden=true;
+
+
+                }
+
+				if (b==4){
+                    document.getElementById("academy").hidden=true;
+					document.getElementById("sport").hidden=true;
+                    document.getElementById("bio").hidden=true;
+					document.getElementById("lan").hidden=false;
+					document.getElementById("ach").hidden=true;
+					document.getElementById("teem").hidden=true;
+					document.getElementById("letter_div").hidden=true;
+                }
+
+				if (b==5){
+                    document.getElementById("academy").hidden=true;
+					document.getElementById("sport").hidden=true;
+                    document.getElementById("bio").hidden=true;
+					document.getElementById("lan").hidden=true;
+					document.getElementById("ach").hidden=false;
+					document.getElementById("teem").hidden=true;
+					document.getElementById("letter_div").hidden=true;
+                }
+
+				if (b==6){
+                    document.getElementById("academy").hidden=true;
+					document.getElementById("sport").hidden=true;
+                    document.getElementById("bio").hidden=true;
+					document.getElementById("lan").hidden=true;
+					document.getElementById("ach").hidden=true;
+					document.getElementById("teem").hidden=false;
+					document.getElementById("letter_div").hidden=true;
+                }
+
+				if (b==7){
+                    document.getElementById("academy").hidden=true;
+					document.getElementById("sport").hidden=true;
+                    document.getElementById("bio").hidden=true;
+					document.getElementById("lan").hidden=true;
+					document.getElementById("ach").hidden=true;
+					document.getElementById("teem").hidden=true;
+					document.getElementById("letter_div").hidden=false;
+                }
+            };
+            document.addEventListener('DOMContentLoaded', function(){
+                document.getElementById("academy").hidden=true;
+				document.getElementById("sport").hidden=true;
+				document.getElementById("lan").hidden=true;
+				document.getElementById("ach").hidden=true;
+				document.getElementById("teem").hidden=true;
+				document.getElementById("letter_div").hidden=true;
+            }, false);
+			
+        </script>
+</body><app-content ng-version="11.1.0"></app-content></html>

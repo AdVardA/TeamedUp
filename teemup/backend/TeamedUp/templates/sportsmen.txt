@@ -1,0 +1,116 @@
+
+
+
+1.1
+<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                        
+						<div class="sidebar sticky-bar p-4 rounded shadow">
+                            <h5 class="widget-title">Поиск спортсмена</h5>
+							<!-- SEARCH -->
+							<div class="widget">
+								<form role="search" method="get">
+									<div class="input-group mb-3 border rounded">
+										<input type="text" id="s" name="s" class="form-control border-0" placeholder="Ключевое слово">
+										<button type="submit" class="input-group-text bg-transparent border-0" id="searchsubmit"><i class="uil uil-search"></i></button>
+									</div>
+								</form>
+							</div>
+							<!-- SEARCH -->
+
+							<!-- Categories -->
+							<div class="widget mb-4 pb-4 border-bottom">
+
+								<div class="mt-4 mb-0">
+									<select class="form-select form-control" aria-label="Default select example">
+												<option value="first">Все позиции</option>
+												<option value="var2">Point guard</option>
+												<option value="var3">shooting guard </option>
+												<option value="var4">small forward</option>
+									</select>
+								</div>
+							</div>
+							<!-- Categories -->
+
+							<!-- Posted -->
+							<div class="widget mb-4 pb-4 border-bottom">
+								<h5 class="widget-title">Дата публикации</h5>
+								<div class="mt-4">
+									<div class="form-check mb-0">
+										<input class="form-check-input" checked="" type="radio" name="flexRadioDefault" id="lasthour">
+										<label class="form-check-label" for="lasthour">Last Hour</label>
+									</div>
+
+									<div class="form-check mb-0">
+										<input class="form-check-input" checked="" type="radio" name="flexRadioDefault" id="oneday">
+										<label class="form-check-label" for="oneday">Last 24 hours</label>
+									</div>
+
+									<div class="form-check mb-0">
+										<input class="form-check-input" checked="" type="radio" name="flexRadioDefault" id="sevenday">
+										<label class="form-check-label" for="sevenday">Last 7 days</label>
+									</div>
+
+									<div class="form-check mb-0">
+										<input class="form-check-input" checked="" type="radio" name="flexRadioDefault" id="fourteenhour">
+										<label class="form-check-label" for="fourteenhour">Last 14 days</label>
+									</div>
+
+									<div class="form-check mb-0">
+										<input class="form-check-input" checked="" type="radio" name="flexRadioDefault" id="onemonth">
+										<label class="form-check-label" for="onemonth">Last 30 days</label>
+									</div>
+								</div>
+							</div>
+							<!-- Posted -->
+
+							<!-- Job Type -->
+							<div class="widget mb-4 pb-4 border-bottom">
+								<h5 class="widget-title">Гражданство</h5>
+								<div class="mt-4">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="contract">
+										<label class="form-check-label" for="contract">USA</label>
+									</div>
+
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="freelancer">
+										<label class="form-check-label" for="freelancer">Иностранный студент</label>
+									</div>
+
+								</div>
+							</div>
+							<!-- Job Type -->
+
+							<!-- Posted -->
+							<div class="widget">
+								<h5 class="widget-title">Опыт</h5>
+								<div class="mt-4">
+									<div class="form-check mb-0">
+										<input class="form-check-input" checked="" type="radio" name="flexRadioDefault2" id="fresher">
+										<label class="form-check-label" for="fresher">Fresher</label>
+									</div>
+
+									<div class="form-check mb-0">
+										<input class="form-check-input" checked="" type="radio" name="flexRadioDefault2" id="oneyear">
+										<label class="form-check-label" for="oneyear">+1 Year</label>
+									</div>
+
+									<div class="form-check mb-0">
+										<input class="form-check-input" checked="" type="radio" name="flexRadioDefault2" id="twoyear">
+										<label class="form-check-label" for="twoyear">+2 Year</label>
+									</div>
+
+									<div class="form-check mb-0">
+										<input class="form-check-input" checked="" type="radio" name="flexRadioDefault2" id="3year">
+										<label class="form-check-label" for="3year">+3 Year</label>
+									</div>
+
+									<div class="form-check mb-0">
+										<input class="form-check-input" checked="" type="radio" name="flexRadioDefault2" id="fiveyear">
+										<label class="form-check-label" for="fiveyear">+5 Year</label>
+									</div>
+								</div>
+							</div>
+							<!-- Posted -->
+						</div>
+					</div><!--end col-->

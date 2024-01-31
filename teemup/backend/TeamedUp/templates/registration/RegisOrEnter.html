@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://teamedup.citadel.pro/html/ -->
+<html lang="ru"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>TeamedUP - University Sport Exchange Portal</title>
+
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Premium Bootstrap 5 Landing Page Template">
+		<meta name="keywords" content="Saas, Software, multi-uses, HTML, Clean, Modern">
+		<meta name="author" content="Shreethemes">
+		<meta name="email" content="shreethemes@gmail.com">
+		<meta name="website" content="http://shreethemes.in">
+		<meta name="Version" content="v3.0.0">
+		<!-- favicon -->
+		<link rel="apple-touch-icon" sizes="57x57" href="http://teamedup.citadel.pro/t/fav/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="http://teamedup.citadel.pro/t/fav/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="http://teamedup.citadel.pro/t/fav/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="http://teamedup.citadel.pro/t/fav/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="http://teamedup.citadel.pro/t/fav/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="http://teamedup.citadel.pro/t/fav/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="http://teamedup.citadel.pro/t/fav/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="http://teamedup.citadel.pro/t/fav/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="http://teamedup.citadel.pro/t/fav/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="http://teamedup.citadel.pro/t/fav/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="http://teamedup.citadel.pro/t/fav/t/fav/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="http://teamedup.citadel.pro/t/fav/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="http://teamedup.citadel.pro/t/fav/favicon-16x16.png">
+		<link rel="manifest" href="http://teamedup.citadel.pro/t/fav/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/t/fav/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+		<!-- Bootstrap -->
+		<link href="/static/RegisOrEnter_files/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<!-- Icons -->
+		<link href="/static/RegisOrEnter_files/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="/static/RegisOrEnter_files/line.css">
+		<!-- Slider -->
+		<link rel="stylesheet" href="/static/RegisOrEnter_files/tiny-slider.css">
+		<!-- Main Css -->
+		<link href="/static/RegisOrEnter_files/style.css" rel="stylesheet" type="text/css" id="theme-opt">
+		<link href="/static/RegisOrEnter_files/default.css" rel="stylesheet" id="color-opt">
+		<link href="/static/RegisOrEnter_files/add.css" rel="stylesheet" id="my-style">
+	<style></style></head>
+
+	<body>
+			<!-- Navbar STart -->
+		<header id="topnav" class="defaultscroll sticky">
+			<div class="container">
+				<!-- Logo container-->
+				<a class="logo" href="http://teamedup.citadel.pro/html/">
+					<img src="/static/RegisOrEnter_files/tup-svg.svg" class="logo-light-mode top-logo" alt="">
+									</a>
+				
+				<!-- End Logo container-->
+				<div class="menu-extras">
+					<div class="menu-item">
+						<!-- Mobile menu toggle-->
+						<a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+							<div class="lines">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</a>
+						<!-- End mobile menu toggle-->
+					</div>
+				</div>
+
+				{% if request.user.is_authenticated %}
+					<div id="navigation">
+						<!-- Navigation Menu-->
+						<ul class="navigation-menu">
+							{%for i in menu %}
+								<li><a href={{i.link}} class="sub-menu-item">{{i.name}}</a></li>
+						{%endfor%}
+						</ul><!--end navigation menu-->
+
+						<div class="buy-menu-btn d-none">
+							<a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary">Buy Now</a>
+						</div><!--end login button-->
+
+					</div><!--end navigation-->
+				{% endif %}
+				</div><!--end navigation-->
+			</div><!--end container-->
+		</header><!--end header-->
+		<!-- Navbar End -->
+
+<!-- Авторизация / Регистрация -->
+<section class="bg-home d-flex align-items-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5 col-md-6">
+						
+						<!-- Авторизация -->
+						<div class="card login-page bg-white shadow rounded border-0">
+							<div class="card-body">
+								<h4 class="card-title text-center">Авторизация</h4>
+								<form class="login-form mt-4" action="/login" method="post">
+									<div class="row">
+										<div class="col-lg-12">
+											<div class="mb-3">
+												<label class="form-label">Ваш Email <span class="text-danger">*</span></label>
+												<div class="form-icon position-relative">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user fea icon-sm icons"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+													<input type="email" class="form-control ps-5" placeholder="yours@email.ru" name="email" required="" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAZdJREFUOBGVVD2LwkAQfTEHfhTXqIXggY0KNoKtEBBsDv0Zh0JI5w9Qf4bXWPkHBPHqWKq1CFaeWImIwS8w5Hai2UskxLiw2Zk3b97uziwR2u32p2EYHTY/4GMIgvDLaLVWq/VD9MAryZRw3+ibbBok4GvnG/32tecE7IFndiQSQSaTcdBeEkilUiiXy+4CoVCIB4LBIFixuG+PcfBuvNFarVZRKBTQ6/Ww3W4hyzLW6zW63a4j9phM/ktXcBMQms2mQQE65vl8Njl0hcvl4sbnGLviijl1fgIrmRjPkonDWplkS8esAQFeI51OQ5IkxGIxLJdLDAYD7Pd7U4SfwEugWCwiGo1iNBohm80il8txeuD+tjngZsxmM4TDYeTzeRyPRywWC04jgfozkd1uB13XEY/HzTafTicu8P9aOHQzrO6Q12g0sNls0O/3oSgKJpMJhsOhSfRVg8PhgEQigUqlAlEUQb41RMt4XEul0hfD3gmfz+e4Xq/mnE6nGI/H1AF67iuvNlJt6EeT1DQNqqo69qBkBtT/ANzCmpZx1xTXAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+												</div>
+											</div>
+										</div><!--end col-->
+
+										<div class="col-lg-12">
+											<div class="mb-3">
+												<label class="form-label">Пароль <span class="text-danger">*</span></label>
+												<div class="form-icon position-relative">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-key fea icon-sm icons"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg>
+													<input type="password" class="form-control ps-5" placeholder="******" required="" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAZdJREFUOBGVVD2LwkAQfTEHfhTXqIXggY0KNoKtEBBsDv0Zh0JI5w9Qf4bXWPkHBPHqWKq1CFaeWImIwS8w5Hai2UskxLiw2Zk3b97uziwR2u32p2EYHTY/4GMIgvDLaLVWq/VD9MAryZRw3+ibbBok4GvnG/32tecE7IFndiQSQSaTcdBeEkilUiiXy+4CoVCIB4LBIFixuG+PcfBuvNFarVZRKBTQ6/Ww3W4hyzLW6zW63a4j9phM/ktXcBMQms2mQQE65vl8Njl0hcvl4sbnGLviijl1fgIrmRjPkonDWplkS8esAQFeI51OQ5IkxGIxLJdLDAYD7Pd7U4SfwEugWCwiGo1iNBohm80il8txeuD+tjngZsxmM4TDYeTzeRyPRywWC04jgfozkd1uB13XEY/HzTafTicu8P9aOHQzrO6Q12g0sNls0O/3oSgKJpMJhsOhSfRVg8PhgEQigUqlAlEUQb41RMt4XEul0hfD3gmfz+e4Xq/mnE6nGI/H1AF67iuvNlJt6EeT1DQNqqo69qBkBtT/ANzCmpZx1xTXAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+												</div>
+											</div>
+										</div><!--end col-->
+
+										<div class="col-lg-12">
+											<div class="d-flex justify-content-between">
+												<div class="mb-3">
+													<div class="form-check">
+														<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
+														<label class="form-check-label" for="flexCheckDefault1">Запомнить меня</label>
+													</div>
+												</div>
+												<p class="forgot-pass mb-0"><a href="http://teamedup.citadel.pro/html/auth-re-password.html" class="text-dark fw-bold">Забыли пароль?</a></p>
+											</div>
+										</div><!--end col-->
+
+										<div class="col-lg-12 mb-0">
+											<div class="d-grid">
+												<button class="btn btn-primary">Войти</button>
+											</div>
+										</div><!--end col-->
+										<div class="col-12 text-center">
+											<p class="mb-0 mt-3"><small class="text-dark me-2">У вас нет аккаунта?</small> <a href="http://teamedup.citadel.pro/html/auth-signup.html" class="text-dark fw-bold">Зарегистрируйтесь!</a></p>
+										</div><!--end col-->
+									</div><!--end row-->
+								</form>
+							</div>
+						</div><!---->
+					</div> <!--end col-->
+					<div class="col-lg-7 col-md-6">
+
+						<!-- Регистрация -->
+						<div class="card shadow rounded border-0">
+							<div class="card-body">
+								<h4 class="card-title text-center">Регистрация</h4>
+								<form class="login-form mt-4">
+									<div class="row">
+										<div class="col-md-6">
+											<div class="mb-3">
+												<label class="form-label">First name <span class="text-danger">*</span></label>
+												<div class="form-icon position-relative">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user fea icon-sm icons"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+													<input type="text" class="form-control ps-5" placeholder="First Name" name="s" required="" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAZdJREFUOBGVVD2LwkAQfTEHfhTXqIXggY0KNoKtEBBsDv0Zh0JI5w9Qf4bXWPkHBPHqWKq1CFaeWImIwS8w5Hai2UskxLiw2Zk3b97uziwR2u32p2EYHTY/4GMIgvDLaLVWq/VD9MAryZRw3+ibbBok4GvnG/32tecE7IFndiQSQSaTcdBeEkilUiiXy+4CoVCIB4LBIFixuG+PcfBuvNFarVZRKBTQ6/Ww3W4hyzLW6zW63a4j9phM/ktXcBMQms2mQQE65vl8Njl0hcvl4sbnGLviijl1fgIrmRjPkonDWplkS8esAQFeI51OQ5IkxGIxLJdLDAYD7Pd7U4SfwEugWCwiGo1iNBohm80il8txeuD+tjngZsxmM4TDYeTzeRyPRywWC04jgfozkd1uB13XEY/HzTafTicu8P9aOHQzrO6Q12g0sNls0O/3oSgKJpMJhsOhSfRVg8PhgEQigUqlAlEUQb41RMt4XEul0hfD3gmfz+e4Xq/mnE6nGI/H1AF67iuvNlJt6EeT1DQNqqo69qBkBtT/ANzCmpZx1xTXAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: pointer;">
+												</div>
+											</div>
+										</div><!--end col-->
+
+										<div class="col-md-6">
+											<div class="mb-3">
+												<label class="form-label">Last name <span class="text-danger">*</span></label>
+												<div class="form-icon position-relative">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user-check fea icon-sm icons"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+													<input type="text" class="form-control ps-5" placeholder="Last Name" name="s" required="">
+												</div>
+											</div>
+										</div><!--end col-->
+
+										<div class="col-md-12">
+											<div class="mb-3">
+												<label class="form-label">Your Email <span class="text-danger">*</span></label>
+												<div class="form-icon position-relative">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail fea icon-sm icons"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+													<input type="email" class="form-control ps-5" placeholder="Email" name="email" required="">
+												</div>
+											</div>
+										</div><!--end col-->
+
+										<div class="col-md-12">
+											<div class="mb-3">
+												<label class="form-label">Password <span class="text-danger">*</span></label>
+												<div class="form-icon position-relative">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-key fea icon-sm icons"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg>
+													<input type="password" class="form-control ps-5" placeholder="Password" required="" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAZdJREFUOBGVVD2LwkAQfTEHfhTXqIXggY0KNoKtEBBsDv0Zh0JI5w9Qf4bXWPkHBPHqWKq1CFaeWImIwS8w5Hai2UskxLiw2Zk3b97uziwR2u32p2EYHTY/4GMIgvDLaLVWq/VD9MAryZRw3+ibbBok4GvnG/32tecE7IFndiQSQSaTcdBeEkilUiiXy+4CoVCIB4LBIFixuG+PcfBuvNFarVZRKBTQ6/Ww3W4hyzLW6zW63a4j9phM/ktXcBMQms2mQQE65vl8Njl0hcvl4sbnGLviijl1fgIrmRjPkonDWplkS8esAQFeI51OQ5IkxGIxLJdLDAYD7Pd7U4SfwEugWCwiGo1iNBohm80il8txeuD+tjngZsxmM4TDYeTzeRyPRywWC04jgfozkd1uB13XEY/HzTafTicu8P9aOHQzrO6Q12g0sNls0O/3oSgKJpMJhsOhSfRVg8PhgEQigUqlAlEUQb41RMt4XEul0hfD3gmfz+e4Xq/mnE6nGI/H1AF67iuvNlJt6EeT1DQNqqo69qBkBtT/ANzCmpZx1xTXAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: pointer;">
+												</div>
+											</div>
+										</div><!--end col-->
+
+										<div class="col-md-12">
+											<div class="mb-3">
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
+													<label class="form-check-label" for="flexCheckDefault2">I Accept <a href="http://teamedup.citadel.pro/html/#" class="text-primary">Terms And Condition</a></label>
+												</div>
+											</div>
+										</div><!--end col-->
+
+										<div class="col-md-12">
+											<div class="d-grid">
+												<button class="btn btn-primary">Register</button>
+											</div>
+										</div><!--end col-->
+
+										<div class="col-lg-12 mt-4 text-center">
+											<h6>Or Signup With</h6>
+											<div class="row">
+												<div class="col-6 mt-3">
+													<div class="d-grid">
+														<a href="javascript:void(0)" class="btn btn-light"><i class="mdi mdi-facebook text-primary"></i> Facebook</a>
+													</div>
+												</div><!--end col-->
+
+												<div class="col-6 mt-3">
+													<div class="d-grid">
+														<a href="javascript:void(0)" class="btn btn-light"><i class="mdi mdi-google text-danger"></i> Google</a>
+													</div>
+												</div><!--end col-->
+											</div>
+										</div><!--end col-->
+
+										<div class="mx-auto">
+											<p class="mb-0 mt-3"><small class="text-dark me-2">Already have an account ?</small> <a href="http://teamedup.citadel.pro/html/auth-login.html" class="text-dark fw-bold">Sign in</a></p>
+										</div>
+									</div><!--end row-->
+								</form>
+							</div>
+						</div>
+
+					</div>
+				</div><!--end row-->
+			</div> <!--end container-->
+		</section>
+
+
+
+
+
+
+
+		<!-- FAQ n Contact Start -->
+		<section class="section bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-12">
+						<div class="d-flex">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-help-circle fea icon-ex-md text-primary me-2 mt-1"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+							<div class="flex-1">
+								<h5 class="mt-0">How our <span class="text-primary">TeamedUp</span> work ?</h5>
+								<p class="answer text-muted mb-0">Due to its widespread use as filler text for layouts, non-readability is of great importance: human perception is tuned to recognize certain patterns and repetitions in texts.</p>
+							</div>
+						</div>
+					</div><!--end col-->
+
+					<div class="col-md-6 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+						<div class="d-flex">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-help-circle fea icon-ex-md text-primary me-2 mt-1"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+							<div class="flex-1">
+								<h5 class="mt-0"> What is the main process open account ?</h5>
+								<p class="answer text-muted mb-0">If the distribution of letters and 'words' is random, the reader will not be distracted from making a neutral judgement on the visual impact</p>
+							</div>
+						</div>
+					</div><!--end col-->
+
+					<div class="col-md-6 col-12 mt-4 pt-2">
+						<div class="d-flex">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-help-circle fea icon-ex-md text-primary me-2 mt-1"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+							<div class="flex-1">
+								<h5 class="mt-0"> How to make unlimited data entry ?</h5>
+								<p class="answer text-muted mb-0">Furthermore, it is advantageous when the dummy text is relatively realistic so that the layout impression of the final publication is not compromised.</p>
+							</div>
+						</div>
+					</div><!--end col-->
+
+					<div class="col-md-6 col-12 mt-4 pt-2">
+						<div class="d-flex">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-help-circle fea icon-ex-md text-primary me-2 mt-1"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+							<div class="flex-1">
+								<h5 class="mt-0"> Is <span class="text-primary">TeamedUp</span> safer to use with my account ?</h5>
+								<p class="answer text-muted mb-0">The most well-known dummy text is the 'Lorem Ipsum', which is said to have originated in the 16th century. Lorem Ipsum is composed in a pseudo-Latin language which more or less corresponds to 'proper' Latin.</p>
+							</div>
+						</div>
+					</div><!--end col-->
+				</div><!--end row-->
+
+				<div class="row my-md-5 pt-md-3 my-4 pt-2 pb-lg-4 justify-content-center">
+					<div class="col-12 text-center">
+						<div class="section-title">
+							<h4 class="title mb-4">Have Question ? Get in touch!</h4>
+							<p class="text-muted para-desc mx-auto">Start working with <span class="text-primary fw-bold">TeamedUp</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
+							<a href="http://teamedup.citadel.pro/html/page-contact-two.html" class="btn btn-primary mt-4"><i class="uil uil-phone"></i> Contact us</a>
+						</div>
+					</div><!--end col-->
+				</div><!--end row-->
+			</div><!--end container-->
+		</section><!--end section-->
+		<div class="position-relative">
+			<div class="shape overflow-hidden text-footer">
+				<svg viewBox="0 0 2880 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M720 125L2160 0H2880V250H0V125H720Z" fill="currentColor"></path>
+				</svg>
+			</div>
+		</div>
+		<!-- FAQ n Contact End -->
+
+				<!-- Footer Start -->
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-12 mb-0 mb-md-4 pb-0 pb-md-2">
+						<a href="http://teamedup.citadel.pro/html/#" class="logo-footer">
+							<img src="./static/RegisOrEnter_files/tup-bw.svg" height="120" alt="" style="filter: invert(1);">
+						</a>
+						<p class="mt-4">Start working with TeamedUP that can provide everything you need.</p>
+						<ul class="list-unstyled social-icon foot-social-icon mb-0 mt-4">
+							{% for l in web %}
+								<li class="list-inline-item"><a href="{{l.link}}" class="rounded"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="{{l.class}}"><rect x="{{l.x}}" y="{{l.y}}" width="{{l.width}}" height="{{l.height}}" rx="{{l.rx}}" ry="{{l.ry}}"></rect><path d="{{l.path}}"></path><line x1="{{l.x1}}" y1="{{l.y2}}" x2="{{l.x2}}" y2="{{l.y2}}"></line><circle cx="{{l.cx}}" cy="{{l.cy}}" r="{{l.r}}"></circle></svg></a></li>
+							{% endfor %}
+						</ul><!--end icon-->
+					</div><!--end col-->
+
+					<div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+						<h5 class="text-light footer-head">Company</h5>
+						<ul class="list-unstyled footer-list mt-4">
+							{%for l in company%}
+								<li><a href="{{l.link}}" class="text-foot"><i>&#9675</i>{{l.name}}</a></li>
+							{%endfor%}
+						</ul>
+					</div><!--end col-->
+
+					<div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+						<h5 class="text-light footer-head">Usefull Links</h5>
+						<ul class="list-unstyled footer-list mt-4">
+							{%for l in usfull_links%}
+								<li><a href="{{l.link}}" class="text-foot"><i>&#9675</i> {{l.name}}</a></li>
+							{%endfor%}
+						</ul>
+					</div><!--end col-->
+
+					<div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+						<h5 class="text-light footer-head">Newsletter</h5>
+						<p class="mt-4">Sign up and receive the latest tips via email.</p>
+						<form>
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="foot-subscribe mb-3">
+										<label class="form-label">Write your email <span class="text-danger">*</span></label>
+										<div class="form-icon position-relative">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail fea icon-sm icons"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+											<input type="email" name="email" id="emailsubscribe" class="form-control ps-5 rounded" placeholder="Your email : " required="">
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-12">
+									<div class="d-grid">
+										<input type="submit" id="submitsubscribe" name="send" class="btn btn-soft-primary" value="Subscribe">
+									</div>
+								</div>
+							</div>
+						</form>
+					</div><!--end col-->
+				</div><!--end row-->
+			</div><!--end container-->
+		</footer><!--end footer-->
+		<footer class="footer footer-bar">
+			<div class="container text-center">
+				<div class="row align-items-center">
+					<div class="col-sm-6">
+						<div class="text-sm-start">
+							<p class="mb-0">© 2021 TeamedUP</p>
+						</div>
+					</div><!--end col-->
+
+					<div class="col-sm-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+						<ul class="list-unstyled text-sm-end mb-0">
+							<li class="list-inline-item"><a href="javascript:void(0)"><img src="./static/RegisOrEnter_files/american-ex.png" class="avatar avatar-ex-sm" title="American Express" alt=""></a></li>
+							<li class="list-inline-item"><a href="javascript:void(0)"><img src="./static/RegisOrEnter_files/discover.png" class="avatar avatar-ex-sm" title="Discover" alt=""></a></li>
+							<li class="list-inline-item"><a href="javascript:void(0)"><img src="./static/RegisOrEnter_files/master-card.png" class="avatar avatar-ex-sm" title="Master Card" alt=""></a></li>
+							<li class="list-inline-item"><a href="javascript:void(0)"><img src="./static/RegisOrEnter_files/paypal.png" class="avatar avatar-ex-sm" title="Paypal" alt=""></a></li>
+							<li class="list-inline-item"><a href="javascript:void(0)"><img src="./static/RegisOrEnter_files/visa.png" class="avatar avatar-ex-sm" title="Visa" alt=""></a></li>
+						</ul>
+					</div><!--end col-->
+				</div><!--end row-->
+			</div><!--end container-->
+		</footer><!--end footer-->
+		<!-- Footer End -->
+
+		<!-- Back to top -->
+		<a href="http://teamedup.citadel.pro/html/#" onclick="topFunction()" id="back-to-top" class="btn btn-icon btn-primary back-to-top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up icons"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></a>
+		<!-- Back to top -->
+		
+
+		<!-- javascript -->
+		<script src="./static/RegisOrEnter_files/bootstrap.bundle.min.js.Без названия"></script>
+		<!-- SLIDER -->
+		<script src="./static/RegisOrEnter_files/tiny-slider.js.Без названия"></script>
+		<!-- Icons -->
+		<script src="./static/RegisOrEnter_files/feather.min.js.Без названия"></script>
+		<!-- Main Js -->
+		<script src="./static/RegisOrEnter_files/plugins.init.js.Без названия"></script><style type="text/css">.typewrite > .wrap { border-right: 0.08em solid transparent}</style><!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
+		<script src="./static/RegisOrEnter_files/app.js.Без названия"></script><!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
+	
+</body><app-content ng-version="11.1.0"></app-content></html>

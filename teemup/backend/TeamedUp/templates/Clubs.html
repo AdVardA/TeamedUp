@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://teamedup.citadel.pro/html/clubs/ -->
+<html lang="ru"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>TeamedUP - University Sport Exchange Portal</title>
+				
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Premium Bootstrap 5 Landing Page Template">
+		<meta name="keywords" content="Saas, Software, multi-uses, HTML, Clean, Modern">
+		<meta name="author" content="Shreethemes">
+		<meta name="email" content="shreethemes@gmail.com">
+		<meta name="website" content="http://shreethemes.in">
+		<meta name="Version" content="v3.0.0">
+
+
+		<!-- favicon -->
+		<link rel="apple-touch-icon" sizes="57x57" href="http://teamedup.citadel.pro/t/fav/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="http://teamedup.citadel.pro/t/fav/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="http://teamedup.citadel.pro/t/fav/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="http://teamedup.citadel.pro/t/fav/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="http://teamedup.citadel.pro/t/fav/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="http://teamedup.citadel.pro/t/fav/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="http://teamedup.citadel.pro/t/fav/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="http://teamedup.citadel.pro/t/fav/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="http://teamedup.citadel.pro/t/fav/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="http://teamedup.citadel.pro/t/fav/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="http://teamedup.citadel.pro/t/fav/t/fav/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="http://teamedup.citadel.pro/t/fav/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="http://teamedup.citadel.pro/t/fav/favicon-16x16.png">
+		<link rel="manifest" href="http://teamedup.citadel.pro/t/fav/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/t/fav/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+		<!-- Bootstrap -->
+		<link href="/static/main_files/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<!-- Icons -->
+		<link href="/static/main_files/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="/static/main_files/line.css">
+		<!-- Slider -->
+		<link rel="stylesheet" href="/static/main_files/tiny-slider.css">
+		<!-- Main Css -->
+		<link href="/static/main_files/style.css" rel="stylesheet" type="text/css" id="theme-opt">
+		<link href="/static/main_files/default.css" rel="stylesheet" id="color-opt">
+		<link href="/static/main_files/add.css" rel="stylesheet" id="my-style">
+	<style></style></head>
+
+	<body>
+		<header id="topnav" class="defaultscroll sticky">
+			<div class="container" style="background-color: white;">
+				<div class="logo">
+					<img src="/static/main_files/tup-svg.svg" class="logo-light-mode top-logo" alt="">
+				</div>
+
+				<!-- Navbar STart -->
+		<header id="topnav" class="defaultscroll sticky" style="background-color: white;">
+			<div class="container">
+				<!-- Logo container-->
+				<a class="logo" href="http://teamedup.citadel.pro/html/">
+					<img src="/static/main_files/tup-svg.svg" class="logo-light-mode top-logo" alt="">
+									</a>
+				
+				<!-- End Logo container-->
+				{% if request.user.is_authenticated %}
+				<div class="menu-extras">
+					<div class="menu-item">
+						<!-- Mobile menu toggle-->
+						<a class="navbar-toggle" id="isToggle()" onclick="toggleMenu()">
+							<div class="lines">
+								
+							</div>
+						</a>
+						<!-- End mobile menu toggle-->
+					</div>
+				</div>
+
+					<div id="navigation">
+						<!-- Navigation Menu-->
+						<ul class="navigation-menu">
+							{% if user.profile.user_flag == True  %}
+								{%for i in menu_user %}
+									<li><a href={{i.link}} class="sub-menu-item">{{i.name}}</a></li>
+								{%endfor%}
+							{% endif %}
+							{% if user.univer_profile.flag == True %}
+						</ul><!--end navigation menu-->
+						{% endif %}
+
+						<div class="buy-menu-btn d-none">
+							<a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary">Buy Now</a>
+						</div><!--end login button-->
+
+					</div><!--end navigation-->
+				{% endif %}
+			</div><!--end container-->
+		</header><!--end header-->
+		<!-- Navbar End -->
+
+<section class="bg-half bg-light d-table w-100">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-12 text-center">
+						<div class="page-next-level">
+							<h1 class="title">Список клубов </h1>
+							<div class="page-next">
+								<nav aria-label="breadcrumb" class="d-inline-block">
+									<ul class="breadcrumb bg-white rounded shadow mb-0">
+										<li class="breadcrumb-item active" aria-current="page"><a href="/">TeamedUP </a>&#187<a href="/Сlubs"> Клубы</a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>  <!--end col-->
+				</div><!--end row-->
+			</div> <!--end container-->
+		</section><!--end section-->
+		<div class="position-relative">
+			<div class="shape overflow-hidden text-white">
+				<svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+				</svg>
+			</div>
+		</div>
+		<!-- Hero End -->
+
+		<!--Blog Lists Start-->
+		<section class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-4 mb-md-4">
+						<h5>Я хочу найти</h5>
+						<form>
+							<div class="row mt-4">
+								<div class="col-md-12">
+									<div class="mb-3">
+										<div class="position-relative">
+											<select id="f-prog" name="f-prog" size="1" class="form-control">
+												<option value="first">Все позиции</option>
+												<option value="var2">Point guard</option>
+												<option value="var3">shooting guard </option>
+												<option value="var4">small forward</option>
+											</select>
+										</div>
+									</div>
+								</div><!--end col-->
+								<div class="col-md-12">
+									<div class="mb-3">
+										<div class="position-relative">
+											<select id="f-prog" name="f-prog" size="1" class="form-control">
+												<option value="first">Все специальности</option>
+												<option value="var2">Бизнес и экономика</option>
+												<option value="var3">Естественные науки</option>
+												<option value="var4">Гуманитарные специальности</option>
+											</select>
+										</div>
+									</div>
+								</div><!--end col-->
+
+								<div class="col-md-12">
+									<div class="mb-3">
+										<div class="position-relative">
+											<div class="form-group">
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" id="gridCheck">
+													<label class="form-check-label" for="gridCheck">
+														Только со стипендиями
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div><!--end col-->
+
+
+
+
+ 							</div><!--end row-->
+							<div class="row">
+								<div class="col-sm-12">
+									<input type="submit" id="submit" name="send" class="btn btn-primary" value="Применить">
+									<input id="reset" name="reset" type="reset" class="btn nobtn btn-reset fs-12" value="Сбросить фильтр">
+								</div><!--end col-->
+							</div><!--end row-->
+						</form>
+
+
+					</div>
+					<div class="col-lg-9 col-md-8">
+						<div class="row">
+
+
+
+							<div class="col-lg-12 col-12 mb-4 pb-2">
+								{% for i in Club %}
+								<div class="card blog rounded border-0 shadow overflow-hidden">
+									<div class="row align-items-center g-0">
+										<div class="col-md-4 order-1">
+											<img src="{{i.png_link}}" class="img-fluid" alt="">
+											<div class="overlay bg-dark"></div>
+										</div><!--end col-->
+
+										<div class="col-md-8 order-2">
+											<div class="card-body content">
+												<h2 class="title"><a href="javascript:void(0)" class="card-title title text-dark">{{i.name}}</a></h2>
+												<div class="text-muted mb-4">
+												<p>{{i.disc}}</p>
+												</div>
+												<div class="post-meta d-flex justify-content-between mt-3">
+													<ul class="list-unstyled mb-0">
+														
+														<li class="list-inline-item"><a href="javascript:void(0)" class="text-muted comments"><i class="uil uil-football-ball me-2"></i>{{i.count_position}} открытых позиций</a></li>
+													</ul>
+													<a href="{{i.club_link}}" class="text-muted readmore">Подробнее<i class="uil uil-angle-right-b align-middle"></i></a>
+												</div>
+											</div>
+										</div><!--end col-->
+									</div> <!--end row-->
+								</div><!--end blog post-->
+								{% endfor %}
+
+							</div><!--end col-->
+
+
+							<!-- PAGINATION START -->
+							<div class="col-12">
+								<ul class="pagination justify-content-center mb-0">
+									<li class="page-item"><a class="page-link" href="javascript:void(0)" aria-label="Previous">Prev</a></li>
+									<li class="page-item active"><a class="page-link" href="javascript:void(0)">1</a></li>
+									<li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+									<li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+									<li class="page-item"><a class="page-link" href="javascript:void(0)" aria-label="Next">Next</a></li>
+								</ul>
+							</div><!--end col-->
+
+						</div>
+					</div>
+
+
+					<!-- PAGINATION END -->
+				</div><!--end row-->
+			</div><!--end container-->
+		</section><!--end section -->
+		<!--Blog Lists End-->
+
+
+
+				<!-- Footer Start -->
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-12 mb-0 mb-md-4 pb-0 pb-md-2">
+						<a href="http://teamedup.citadel.pro/html/universities/#" class="logo-footer">
+							<img src="/static/main_files/tup-bw.svg" height="120" alt="" style="filter: invert(1);">
+						</a>
+						<p class="mt-4">Start working with TeamedUP that can provide everything you need.</p>
+						<ul class="list-unstyled social-icon foot-social-icon mb-0 mt-4">
+							{% for l in web %}
+								<li class="list-inline-item"><a href="{{l.link}}" class="rounded"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="{{l.class}}"><rect x="{{l.x}}" y="{{l.y}}" width="{{l.width}}" height="{{l.height}}" rx="{{l.rx}}" ry="{{l.ry}}"></rect><path d="{{l.path}}"></path><line x1="{{l.x1}}" y1="{{l.y2}}" x2="{{l.x2}}" y2="{{l.y2}}"></line><circle cx="{{l.cx}}" cy="{{l.cy}}" r="{{l.r}}"></circle></svg></a></li>
+							{% endfor %}
+						</ul><!--end icon-->
+					</div><!--end col-->
+
+					<div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+						<h5 class="text-light footer-head">Company</h5>
+						<ul class="list-unstyled footer-list mt-4">
+							{%for l in company%}
+								<li><a href="{{l.link}}" class="text-foot"><i>&#9675</i>{{l.name}}</a></li>
+							{%endfor%}
+						</ul>
+					</div><!--end col-->
+
+					<div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+						<h5 class="text-light footer-head">Usefull Links</h5>
+						<ul class="list-unstyled footer-list mt-4">
+							{%for l in usfull_links%}
+								<li><a href="{{l.link}}" class="text-foot"><i>&#9675</i> {{l.name}}</a></li>
+							{%endfor%}
+						</ul>
+					</div><!--end col-->
+
+					<div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+						<h5 class="text-light footer-head">Newsletter</h5>
+						<p class="mt-4">Sign up and receive the latest tips via email.</p>
+						<form>
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="foot-subscribe mb-3">
+										<label class="form-label">Write your email <span class="text-danger">*</span></label>
+										<div class="form-icon position-relative">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail fea icon-sm icons"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+											<input type="email" name="email" id="emailsubscribe" class="form-control ps-5 rounded" placeholder="Your email : " required="">
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-12">
+									<div class="d-grid">
+										<input type="submit" id="submitsubscribe" name="send" class="btn btn-soft-primary" value="Subscribe">
+									</div>
+								</div>
+							</div>
+						</form>
+					</div><!--end col-->
+				</div><!--end row-->
+			</div><!--end container-->
+		</footer><!--end footer-->
+		<footer class="footer footer-bar">
+			<div class="container text-center">
+				<div class="row align-items-center">
+					<div class="col-sm-6">
+						<div class="text-sm-start">
+							<p class="mb-0">© 2021 TeamedUP</p>
+						</div>
+					</div><!--end col-->
+
+					<div class="col-sm-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+						<ul class="list-unstyled text-sm-end mb-0">
+							<li class="list-inline-item"><a href="javascript:void(0)"><img src="/static/main_files/american-ex.png" class="avatar avatar-ex-sm" title="American Express" alt=""></a></li>
+							<li class="list-inline-item"><a href="javascript:void(0)"><img src="/static/main_files/discover.png" class="avatar avatar-ex-sm" title="Discover" alt=""></a></li>
+							<li class="list-inline-item"><a href="javascript:void(0)"><img src="/static/main_files/master-card.png" class="avatar avatar-ex-sm" title="Master Card" alt=""></a></li>
+							<li class="list-inline-item"><a href="javascript:void(0)"><img src="/static/main_files/paypal.png" class="avatar avatar-ex-sm" title="Paypal" alt=""></a></li>
+							<li class="list-inline-item"><a href="javascript:void(0)"><img src="/static/main_files/visa.png" class="avatar avatar-ex-sm" title="Visa" alt=""></a></li>
+						</ul>
+					</div><!--end col-->
+				</div><!--end row-->
+			</div><!--end container-->
+		</footer><!--end footer-->
+		<!-- Footer End -->
+
+		<!-- Back to top -->
+		<a href="http://teamedup.citadel.pro/html/clubs/#" onclick="topFunction()" id="back-to-top" class="btn btn-icon btn-primary back-to-top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up icons"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></a>
+		<!-- Back to top -->
+		
+
+		<!-- javascript -->
+		<script src="/static/main_files/bootstrap.bundle.min.js"></script>
+		<!-- SLIDER -->
+		<script src="/static/main_files/tiny-slider.js"></script>
+		<!-- Icons -->
+		<script src="/static/main_files/feather.min.js"></script>
+		<!-- Main Js -->
+		<script src="/static/main_files/plugins.init.js"></script><style type="text/css">.typewrite > .wrap { border-right: 0.08em solid transparent}</style><!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
+		<script src="/static/main_files/app.js"></script><!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
+	
+</body><app-content ng-version="11.1.0"></app-content></html>

@@ -1,0 +1,40 @@
+<header id="topnav" class="defaultscroll sticky">
+			<div class="container">
+				<!-- Logo container-->
+				<a class="logo" href="http://teamedup.citadel.pro/html/">
+					<img src="/static/main_files/tup-svg.svg" class="logo-light-mode top-logo" alt="">
+									</a>
+
+				<!-- End Logo container-->
+				<div class="menu-extras">
+					<div class="menu-item">
+						<!-- Mobile menu toggle-->
+						<a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+							<div class="lines">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</a>
+						<!-- End mobile menu toggle-->
+					</div>
+				</div>
+
+				{% if user.profile.user_flag == True  %}
+								{%for i in menu_user %}
+									<li><a href={{i.link}} class="sub-menu-item">{{i.name}}</a></li>
+								{%endfor%}
+							{% endif %}
+							{% if user.univer_profile.flag == True %}
+								{%for i in menu_ather %}
+									<li><a href={{i.link}} class="sub-menu-item">{{i.name}}</a></li>
+								{%endfor%}
+							{% endif %}
+							{% if user.club_profile.flag == True %}
+								{%for i in menu_ather %}
+									<li><a href={{i.link}} class="sub-menu-item">{{i.name}}</a></li>
+								{%endfor%}
+							{% endif %}
+				</div><!--end navigation-->
+			</div><!--end container-->
+		</header><!--end header-->

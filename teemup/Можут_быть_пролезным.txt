@@ -1,0 +1,7 @@
+python manage.py makemigrations TeamedUp
+
+фиолетовый rgb(153, 51, 255) hex #9933ff
+рыжий rgb(255, 153, 51) hex #ff9933
+
+https://zerotobyte.com/django-choices-best-practices/
+pylint TeamedUp/views.py
